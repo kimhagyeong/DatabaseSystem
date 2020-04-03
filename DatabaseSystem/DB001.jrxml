@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.10.0.final using JasperReports Library version 6.10.0-unknown  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="DB001" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="decc34c4-1dd6-47a2-8a70-78693fedbe64">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="DB0001"/>
+	<queryString language="SQL">
+		<![CDATA[select * from Branch]]>
+	</queryString>
+	<field name="branchNo" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="branchNo"/>
+	</field>
+	<field name="street" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="street"/>
+	</field>
+	<field name="city" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="city"/>
+	</field>
+	<field name="postcode" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="postcode"/>
+	</field>
+	<sortField name="branchNo" order="Descending"/>
+	<sortField name="street" order="Descending"/>
+	<sortField name="city" order="Descending"/>
+	<sortField name="postcode" order="Descending"/>
+	<group name="branchNo">
+		<groupExpression><![CDATA[$F{branchNo}]]></groupExpression>
+	</group>
+	<group name="street">
+		<groupExpression><![CDATA[$F{street}]]></groupExpression>
+	</group>
+	<group name="city">
+		<groupExpression><![CDATA[$F{city}]]></groupExpression>
+	</group>
+	<group name="postcode">
+		<groupExpression><![CDATA[$F{postcode}]]></groupExpression>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="170" y="30" width="230" height="29" uuid="0ff8acc2-71c9-4d7f-8bbc-d01a51dfce21"/>
+				<textElement>
+					<font size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Data from Banch Table]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="30" width="100" height="30" uuid="bb990a5e-d3bf-443e-b72d-a11340c308cb">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="3dc96843-b47e-41e9-b2cf-974d323c72b1"/>
+				</reportElement>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[branchNo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="150" y="30" width="100" height="30" uuid="501f1170-034e-4483-90c9-e5f14478642c">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="fedc1024-508c-47f2-9b3b-1da575943122"/>
+				</reportElement>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[street]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="310" y="30" width="100" height="30" uuid="a0e76a63-c4ec-47da-96ad-e23de2361aa4">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="57d5d260-1b90-4e7c-8147-76f101b54180"/>
+				</reportElement>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[city]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="470" y="30" width="100" height="30" uuid="70446f3f-5904-420e-8985-9441f5f6b8d5">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="3cfddb64-5e68-4f9e-b6dc-827733bcf175"/>
+				</reportElement>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[postcode]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="59" width="550" height="1" forecolor="#F71427" uuid="f2caa6a0-1a7f-4733-a9d7-1ac204a53676">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="68" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="20" width="100" height="30" uuid="dbdfd47c-ee42-421e-9063-643d2b784e95">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="3dc96843-b47e-41e9-b2cf-974d323c72b1"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{branchNo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="150" y="20" width="100" height="30" uuid="b6300154-1284-47e9-83ea-0bcde95983ef">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="fedc1024-508c-47f2-9b3b-1da575943122"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{street}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="310" y="20" width="100" height="30" uuid="9fc9be25-3ad5-44a7-b89f-54d26cdecc9b">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="57d5d260-1b90-4e7c-8147-76f101b54180"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{city}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="470" y="20" width="100" height="30" uuid="999aae93-63e5-4082-9715-3613e2a2726d">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="3cfddb64-5e68-4f9e-b6dc-827733bcf175"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{postcode}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
